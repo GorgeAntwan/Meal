@@ -1,3 +1,4 @@
+import 'package:Meal/pages/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 class CategoryItem extends StatelessWidget {
   final String title,id;
@@ -12,7 +13,7 @@ class CategoryItem extends StatelessWidget {
     return Container(
       child: InkWell(
           onTap: (){
-             Navigator.of(context).pushNamed( '/category-meals',arguments: {'id':id,'title':title});
+             Navigator.of(context).pushNamed(CategoryMealsScreen.routeName,arguments: {'id':id,'title':title});
           },
           splashColor: Theme.of(context).primaryColor,
           borderRadius:BorderRadius.circular(15),

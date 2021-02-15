@@ -1,5 +1,6 @@
 import 'package:Meal/pages/categories_screen.dart';
 import 'package:Meal/pages/category_meals_screen.dart';
+import 'package:Meal/pages/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -47,9 +48,12 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:CategoriesScreen(),
+      //home:CategoriesScreen(),
+      initialRoute: '/',
       routes: {
-        '/category-meals':(cntx)=>CategoryMealsScreen(),
+        '/':(cntx)=>CategoriesScreen(),
+        CategoryMealsScreen.routeName:(cntx)=>CategoryMealsScreen(),
+        MealDetailScreen.routName:(cntx)=>MealDetailScreen(),
       },
     );
   }
